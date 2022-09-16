@@ -2,9 +2,13 @@ version: 2.1
 
 
 jobs:
-  link-app:
+  build:
     docker:
       - image: circleci/node:13.8.0
+        auth:
+          auth:
+          username: smartcloud2022
+          password: $DOCKERPASS
         
     steps:
       - checkout
