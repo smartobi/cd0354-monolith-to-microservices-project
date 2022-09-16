@@ -28,16 +28,16 @@ jobs:
             echo "--------- The images is Building  ------------"
   
             docker build -t udagram-api-feed ./udagram-api-feed
-            docker tag udagram-api-feed smartcloud2022/udagram-api-feed:v1
+            docker tag udagram-api-feed smartcloud2022/udagram-api-feed:v2
 
             docker build -t udagram-api-user ./udagram-api-user
-            docker tag udagram-api-user smartcloud2022/udagram-api-user:v1
+            docker tag udagram-api-user smartcloud2022/udagram-api-user:v2
     
             docker build -t udagram-frontend ./udagram-frontend
-            docker tag udagram-frontend smartcloud2022/udagram-frontend:v1
+            docker tag udagram-frontend smartcloud2022/udagram-frontend:v2
 
             docker build -t udagram-reverseproxy ./udagram-reverseproxy
-            docker tag udagram-reverseproxy smartcloud2022/udagram-reverseproxy:v1
+            docker tag udagram-reverseproxy smartcloud2022/udagram-reverseproxy:v2
   
             echo "----------All image succesfully built----------"
 
