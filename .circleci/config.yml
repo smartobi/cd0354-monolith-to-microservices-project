@@ -6,7 +6,6 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
         auth:
-          auth:
           username: smartcloud2022
           password: $DOCKERPASS
         
@@ -29,16 +28,16 @@ jobs:
             echo "--------- The images is Building  ------------"
   
             docker build -t udagram-api-feed ./udagram-api-feed
-            docker tag udagram-api-feed smartcloud2022/udagram-api-feed:v3
+            docker tag udagram-api-feed smartcloud2022/udagram-api-feed:v1
 
             docker build -t udagram-api-user ./udagram-api-user
-            docker tag udagram-api-user smartcloud2022/udagram-api-user:v3
+            docker tag udagram-api-user smartcloud2022/udagram-api-user:v1
     
             docker build -t udagram-frontend ./udagram-frontend
-            docker tag udagram-feedend smartcloud2022/udagram-feedend:v3
+            docker tag udagram-feedend smartcloud2022/udagram-frontend:v1
 
             docker build -t udagram-reverseproxy ./udagram-reverseproxy
-            docker tag udagram-reverseproxy smartcloud2022/udagram-reverseproxy:v3
+            docker tag udagram-reverseproxy smartcloud2022/udagram-reverseproxy:v1
   
             echo "----------All image succesfully built----------"
 
@@ -49,10 +48,10 @@ jobs:
        
             echo "----------Pushing images to dockerhub----------"
             
-            docker push smartcloud2022/udagram-api-feed:v3
-            docker push smartcloud2022/udagram-api-user:v3
-            docker push smartcloud2022/udagram-frontend:v3
-            docker push smartcloud2022/udagram-reverseproxy:v3
+            docker push smartcloud2022/udagram-api-feed:v1
+            docker push smartcloud2022/udagram-api-user:v1
+            docker push smartcloud2022/udagram-frontend:v1
+            docker push smartcloud2022/udagram-reverseproxy:v1
 
 
 workflows:
