@@ -2,7 +2,7 @@ version: 2.1
 
 
 jobs:
-  build:
+  lint-app:
     docker:
       - image: circleci/node:13.8.0
         auth:
@@ -58,6 +58,6 @@ jobs:
 workflows:
   default:
     jobs:
-      - lint-app
+      - lint-app:
       - build-docker:
           requires: [lint-app]
