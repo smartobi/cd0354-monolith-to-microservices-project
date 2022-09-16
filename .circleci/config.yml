@@ -5,6 +5,9 @@ jobs:
   link-app:
     docker:
       - image: circleci/node:13.8.0
+        auth:
+          username: smartcloud2022
+          password: $DOCKERPASS
     steps:
       - checkout
   build-docker:
