@@ -21,7 +21,7 @@ jobs:
             node --version => v18.0.0
             sudo apt install nodejs
             
-            echo "--------- The images is Building  -----------"
+            echo "--------- The images is Building  ------------"
   
             docker build -t udagram-api-feed ./udagram-api-feed
             docker tag udagram-api-feed smartcloud2022/udagram-api-feed:v3
