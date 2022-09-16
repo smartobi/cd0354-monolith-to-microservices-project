@@ -34,7 +34,7 @@ jobs:
             docker tag udagram-api-user smartcloud2022/udagram-api-user:v1
     
             docker build -t udagram-frontend ./udagram-frontend
-            docker tag udagram-feedend smartcloud2022/udagram-frontend:v1
+            docker tag udagram-frontend smartcloud2022/udagram-frontend:v1
 
             docker build -t udagram-reverseproxy ./udagram-reverseproxy
             docker tag udagram-reverseproxy smartcloud2022/udagram-reverseproxy:v1
